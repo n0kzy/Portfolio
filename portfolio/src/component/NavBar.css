@@ -1,0 +1,110 @@
+.NavBar {
+    background-color: #060113;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.SectionContainer {
+    display: flex;
+    align-items: center;
+}
+
+.SectionContainer .Section {
+    margin-right: 2rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: #9FF9CA;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.SectionContainer .Section:hover {
+    color: gold;
+}
+
+.Contact {
+    color: black;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, background-color 0.3s;
+    background-color: whitesmoke;
+}
+
+.Contact:hover {
+    color: #9FF9CA;
+    background-color: #060113;
+}
+
+.nav__toggler {
+    display: none;
+    cursor: pointer;
+}
+
+.nav__menu {
+    display: none;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    background-color: #060113;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav__menu li {
+    margin: 1rem 0;
+}
+
+.nav__menu li a {
+    color: #9FF9CA;
+    font-size: 1.6rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav__menu li a:hover {
+    color: gold;
+}
+
+/* Styles spécifiques pour les petites tailles d'écran */
+@media screen and (max-width: 800px) {
+    .SectionContainer {
+        display: none;
+    }
+
+    .Contact {
+        display: none;
+    }
+
+    .nav__toggler {
+        background-color: #171612;
+        color: #9FF9CA;
+        height: 50px;
+        width: 50px;
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 7.5rem
+    }
+
+    .nav__menu {
+        display: flex; /* Afficher le menu seulement si showAllItems est vrai */
+        top: 5rem;
+        right: 5rem;
+        background-color: #060113;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        padding: 1rem;
+    }
+}

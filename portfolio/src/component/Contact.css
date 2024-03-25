@@ -1,0 +1,92 @@
+.ContactContainer {
+    background-color: darkseagreen;
+    min-height: calc(100vh - 4rem);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #171612;
+
+}
+.ContactTitle{
+    font-size : 3rem;
+    margin-bottom : 1.5rem;
+}
+.ContactText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.ContactForm{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    max-width: 60vw;
+
+}
+.name, .email{
+    font-size: medium;
+    width: 100%;
+    max-width: 40rem;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    color:whitesmoke;
+    border: none;
+    border-radius: 0.5rem;
+    background: #171612;
+}
+.msg{
+    font-size: large;
+    width: 100%;
+    max-width: 40rem;
+    max-height: 60rem;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    color:whitesmoke;
+    border: none;
+    border-radius: 0.5rem;
+    background: #171612;
+}
+
+.CV{
+    display: flex;
+    border-radius: 1.5rem;
+    font-size: 32px;
+    color: #9FF9CA;
+    height: 5rem;
+    width: 5rem;
+    background-color: #171612;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    border: none;
+    cursor: pointer;
+    transition: color 0.6s;
+}
+.CV:hover {
+    color: #171612;
+    background-color: darkseagreen ;
+}
+
+.Submit{
+    font-size: large;
+    background: whitesmoke;
+    border: none;
+    padding: 0.75rem 3.5rem;
+    border-radius: 0.5rem;
+    margin: 2rem;
+    transition: all 0.3s ease; /* Ajoute une transition pour tous les changements de style */
+}
+
+.Submit:hover {
+    background-color: lightgray; /* Change la couleur de fond au survol */
+}
+.Submit:active {
+    transform: translateY(2px); /* Légère animation de clic */
+    animation: changeBackground 0.3s; /* Animation de changement de couleur de fond pendant 2 secondes */
+}

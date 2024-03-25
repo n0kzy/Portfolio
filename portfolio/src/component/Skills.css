@@ -1,0 +1,16 @@
+.Skills {
+    background-color: #171612;
+    min-height: calc(100vh - 4rem);
+    margin: 0 auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    color: #9FF9CA;
+
+}
+.ImageSkills{
+    height: 100px;
+    width: 100px;
+    align-self: center;
+}

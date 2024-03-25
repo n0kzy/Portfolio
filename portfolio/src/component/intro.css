@@ -1,0 +1,46 @@
+.Intro {
+    background-color: #171612;
+    min-height: calc(120vh - 4rem);
+    margin: 0;
+    display: flex;
+    font-size: calc(10px + 2vmin);
+    color: #9FF9CA;
+
+}
+.TextContaint{
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.IntroText{
+    color: #9FF9CA;
+    padding-left: 3vh;
+    font-size: 3vh
+}
+.Name{
+    color: #9FF9CA;
+    padding-left: 3vh;
+    font-size: 6vh
+}
+
+.ImageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+@media screen and (max-width: 800px){
+    .Image{
+        width: 200px;
+    }
+    .Name{
+        padding-left: 2vh;
+        font-size: 4vh;
+    }
+    .IntroText{
+        padding-left: 2vh;
+        font-size: 3vh;
+    }
+    
+}
