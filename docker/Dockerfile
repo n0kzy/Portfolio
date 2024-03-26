@@ -1,5 +1,5 @@
 FROM node:alpine as build
-COPY portfolio/public/ /var/www/html/
+COPY ./portfolio/public/ /var/www/html/
 WORKDIR /var/www/html/
 
 RUN npm install
