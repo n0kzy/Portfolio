@@ -28,6 +28,12 @@ steps:
        password:
          from_secret: SECRET_REGISTRY_PASSWORD
 
+  - name: build-and-run-container
+    image: docker
+    commands:
+      - docker build -t portfolio/ portfolio/
+      - docker run -d -p 3000:3000 portfolio/
+      
   - name: deploy-container
     image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-dockerproxy-clientdrone:latest
     environment:
