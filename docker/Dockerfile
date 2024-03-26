@@ -1,8 +1,9 @@
 FROM node:alpine as build
-WORKDIR /app
-COPY portfolio/public/ ./public
+COPY portfolio/public/ /var/www/html/
+WORKDIR /var/www/html/
+
 RUN npm install
-RUN npm run build
+RUN npm start build
 
 FROM php:8.0-apache
 COPY --from=build /app/build /var/www/html
