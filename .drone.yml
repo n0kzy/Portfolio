@@ -31,9 +31,9 @@ steps:
   - name: build-and-run-container
     image: docker
     commands:
-      - docker build -t portfolio/ portfolio/
-      - docker run -d -p 3000:3000 portfolio/
-      
+      - docker build -t hub.codefirst.iut.uca.fr/patrick.brugiere/portfoliodepot:latest portfolio/
+      - docker run -d -p 3000:3000 hub.codefirst.iut.uca.fr/patrick.brugiere/portfoliodepot:latest
+
   - name: deploy-container
     image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-dockerproxy-clientdrone:latest
     environment:
