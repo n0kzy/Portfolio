@@ -31,7 +31,6 @@ steps:
   - name: build-and-run-container
     image: docker
     commands:
-      - docker build -t . portfo
       - docker run -d -p 3000:3000 portfo
 
   - name: deploy-container
