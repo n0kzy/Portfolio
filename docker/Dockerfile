@@ -1,6 +1,6 @@
 FROM node:alpine as build
 WORKDIR /app
-COPY portfolio/public/ ./
+COPY portfolio/public/ ./public
 RUN npm install
 RUN npm run build
 
