@@ -35,8 +35,3 @@ steps:
         CONTAINERNAME: portfoliodepot
         COMMAND: create
         OVERWRITE: true
-
-  - name: run-container
-    image: docker
-    commands:
-      - docker run -d -p 80:80 hub.codefirst.iut.uca.fr/patrick.brugiere/portfoliodepot:latest
