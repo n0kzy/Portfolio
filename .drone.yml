@@ -19,7 +19,7 @@ steps:
     image: plugins/docker
     settings:
        dockerfile: docker/Dockerfile
-       context: portfolio/public/
+       context: portfolio/
        registry: hub.codefirst.iut.uca.fr
        mirror: https://proxy.iut.uca.fr:8443
        repo: hub.codefirst.iut.uca.fr/patrick.brugiere/portfoliodepot
