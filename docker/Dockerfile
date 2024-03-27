@@ -17,4 +17,4 @@ RUN npm install
 EXPOSE 3000
 
 # Commande par défaut pour démarrer l'application
-CMD npm start
+CMD ls -la
