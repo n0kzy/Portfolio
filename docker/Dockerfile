@@ -12,7 +12,7 @@ COPY . .
 COPY src/ ./src/
 COPY src/component ./src/component
 
-FROM nginx:latest as base
+FROM php:8.0-apache as base
 
 # Copy the built React app from the previous stage
 COPY --from=build /usr/src/docker-react-sample /var/www/html/
