@@ -1,22 +1,20 @@
-FROM node:alpine as build
+# Utilisation d'une image de base avec Node.js
+FROM node:alpine
 
-WORKDIR /usr/src/docker-react-sample
+# Création du répertoire de travail dans le conteneur
+WORKDIR /app
 
+# Copie des fichiers package.json et package-lock.json pour installer les dépendances
 COPY package*.json ./
-RUN npm install
 
+# Copie du reste des fichiers du projet dans le répertoire de travail du conteneur
 COPY . .
 
-FROM php:8.0-apache as base
+# Installation des dépendances
+RUN npm install
 
-# Copy the built React app from the previous stage
-COPY --from=build /usr/src/docker-react-sample /var/www/html/
+# Exposition du port 3000 utilisé par l'application React
+EXPOSE 3000
 
-# Set the working directory
-WORKDIR /var/www/html/
-
-# Expose port 80 (port par défaut pour HTTP)
-EXPOSE 80
-
-# Define the default command to start Apache
-CMD ["apache2-foreground"]
+# Commande par défaut pour démarrer l'application
+CMD npm start
