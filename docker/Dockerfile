@@ -10,7 +10,7 @@ COPY . .
 RUN npm install
 
 # Exposition du port 3000 utilisé par l'application React
-EXPOSE 3000
+EXPOSE 80
 
 # Commande par défaut pour démarrer l'application
 CMD npm start
