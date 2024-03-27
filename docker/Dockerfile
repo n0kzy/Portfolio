@@ -1,11 +1,12 @@
-FROM node:alpine
-WORKDIR /app
 
-COPY package.json .
+FROM php:8.0-apache as base
+COPY . /var/www/html/
+WORKDIR /var/www/html/
+COPY package.json /var/www/html/
 
 RUN npm install
 
-COPY . .
+COPY . /var/www/html/
 
 CMD ["npm", "start"]
 
