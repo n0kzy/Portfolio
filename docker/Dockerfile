@@ -5,16 +5,16 @@ FROM node:alpine
 WORKDIR /app
 
 # Copie des fichiers package.json et package-lock.json pour installer les dépendances
-COPY portfolio/package*.json ./
+#COPY portfolio/package*.json ./
 
 # Copie du reste des fichiers du projet dans le répertoire de travail du conteneur
-COPY portfolio/ .
+COPY . .
 
 # Installation des dépendances
-RUN npm install
+#RUN npm install
 
 # Exposition du port 3000 utilisé par l'application React
-EXPOSE 3000
+#EXPOSE 3000
 
 # Commande par défaut pour démarrer l'application
-CMD npm start
+CMD ls -la
