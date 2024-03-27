@@ -3,8 +3,8 @@ FROM node:latest as build
 
 WORKDIR /app
 
-COPY package.json .
-COPY package-lock.json .
+COPY portfolio/package.json .
+COPY portfolio/package-lock.json .
 
 RUN npm install
 
