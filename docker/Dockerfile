@@ -1,16 +1,11 @@
 FROM node:alpine as build
 
-
 WORKDIR /usr/src/docker-react-sample
-
 
 COPY package*.json ./
 RUN npm install
 
-
 COPY . .
-COPY src/ ./src/
-COPY src/component ./src/component
 
 FROM php:8.0-apache as base
 
