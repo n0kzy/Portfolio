@@ -42,3 +42,5 @@ steps:
         CONTAINERNAME: portfoliodepot
         COMMAND: create
         OVERWRITE: true
+    ports:
+      - "80:3000"
