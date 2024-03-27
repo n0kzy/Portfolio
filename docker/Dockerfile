@@ -5,10 +5,10 @@ FROM node:alpine
 WORKDIR /app
 
 # Copie des fichiers package.json et package-lock.json pour installer les dépendances
-COPY package*.json ./
+COPY portfolio/package*.json ./
 
 # Copie du reste des fichiers du projet dans le répertoire de travail du conteneur
-COPY . .
+COPY portfolio/ .
 
 # Installation des dépendances
 RUN npm install
