@@ -28,12 +28,6 @@ steps:
        password:
          from_secret: SECRET_REGISTRY_PASSWORD
 
-
-#  - name: build-and-run-container
-#    image: docker
-#    commands:
-#      - docker build -t . portfo
-#      - docker run -d -p 3000:3000 portfo
   - name: deploy-container
     image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-dockerproxy-clientdrone:latest
     environment:
@@ -41,4 +35,5 @@ steps:
         CONTAINERNAME: portfoliodepot
         COMMAND: create
         OVERWRITE: true
-    ports: 80:3000
+    port: 
+      - 80:3000
