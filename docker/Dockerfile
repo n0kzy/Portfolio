@@ -13,9 +13,6 @@ RUN npm install
 # To bundle your app’s source code inside the Docker image, use the COPY instruction:
 COPY . .
 
-# Your app binds to port 3000 so you’ll use the EXPOSE instruction to have it mapped by the docker daemon:
-EXPOSE 3000
-
 # Stage 2: Build PHP Apache Server
 FROM php:8.0-apache as base
 
