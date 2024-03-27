@@ -17,4 +17,4 @@ COPY . .
 #EXPOSE 3000
 
 # Commande par défaut pour démarrer l'application
-CMD ls -la
+RUN ls -la
