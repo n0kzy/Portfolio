@@ -21,4 +21,3 @@ EXPOSE 80
 
 # Commande par défaut pour démarrer Nginx
 CMD ["nginx", "-g", "daemon off;"]
-CMD npm start
