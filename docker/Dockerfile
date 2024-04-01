@@ -4,7 +4,7 @@ FROM node:alpine as build
 WORKDIR /app
 
 # Copie des fichiers du projet dans le répertoire de travail du conteneur
-COPY . .
+COPY . /app
 
 # Installation des dépendances et construction de l'application React
 RUN npm install
