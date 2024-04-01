@@ -5,7 +5,7 @@ FROM node:alpine as build
 WORKDIR /app
 
 # Copie des fichiers du projet dans le répertoire de travail du conteneur
-COPY . /app
+COPY . .
 
 # Installation des dépendances
 RUN npm install
