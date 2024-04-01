@@ -16,17 +16,16 @@ RUN npm install -g serve
 
 
 # Étape de production
-FROM node:alpine
+FROM php:8.0-apache as base
 
-# Définition du répertoire de travail
-WORKDIR /app
+WORKDIR /var/www/html/
 
 # Copie des fichiers construits depuis l'étape précédente
-COPY --from=build /app /app
+COPY --from=build /app /var/www/html/
 
 # Exécution de la commande de build pour votre application React Native
 RUN npm run build
 
-CMD serve -s build -l 80
+RUN serve -s build -l 80
 
 EXPOSE 80
