@@ -1,15 +1,23 @@
-FROM node:alpine
-FROM php:8.0-apache as base
+# Étape de build pour construire l'application React
+FROM node:alpine as build
 
-WORKDIR /var/www/html/
-# Copie du reste des fichiers du projet dans le répertoire de travail du conteneur
-COPY . /var/www/html/
+WORKDIR /app
 
-# Installation des dépendances
+# Copie des fichiers du projet dans le répertoire de travail du conteneur
+COPY . .
+
+# Installation des dépendances et construction de l'application React
 RUN npm install
+RUN npm run build
 
-# Exposition du port 3000 utilisé par l'application React
+# Étape de production pour servir les fichiers statiques
+FROM nginx:alpine
+
+# Copie des fichiers construits dans le répertoire de travail du conteneur Nginx
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Exposition du port 80 utilisé par Nginx
 EXPOSE 80
 
-# Commande par défaut pour démarrer l'application
-CMD npm start
+# Commande par défaut pour démarrer Nginx
+CMD ["nginx", "-g", "daemon off;"]
