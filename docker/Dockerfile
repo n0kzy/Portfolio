@@ -13,6 +13,9 @@ RUN npm install
 # Étape de production
 FROM node:alpine
 
+# Définition du répertoire de travail
+WORKDIR /app
+
 # Copie des fichiers construits depuis l'étape précédente
 COPY --from=build /app /app
 
@@ -24,3 +27,4 @@ EXPOSE 3000
 
 # Commande par défaut pour démarrer votre application React Native
 CMD ["npm", "start"]
+
