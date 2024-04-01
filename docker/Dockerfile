@@ -10,6 +10,11 @@ COPY . .
 # Installation des dépendances
 RUN npm install
 
+RUN npm run build
+
+RUN npm install -g serve
+
+
 # Étape de production
 FROM node:alpine
 
@@ -22,6 +27,6 @@ COPY --from=build /app /app
 # Exécution de la commande de build pour votre application React Native
 RUN npm run build
 
-# Exposition du port utilisé par votre application React Native
-EXPOSE 3000
+EXPOSE 80
 
+CMD serve -s build -l 80
