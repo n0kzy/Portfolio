@@ -10,19 +10,20 @@ COPY . .
 # Installation des dépendances
 RUN npm install
 
+# Construction de l'application ReactJS
 RUN npm run build
 
+# Installation de serve pour servir l'application
 RUN npm install -g serve
 
-
 # Étape de production
-FROM php:8.0-apache as base
-
-WORKDIR /var/www/html/
+FROM php:8.0-apache
 
 # Copie des fichiers construits depuis l'étape précédente
-COPY --from=build /app /var/www/html/
+COPY --from=build /app/build /var/www/html/
 
-RUN serve -s build -l 80
-
+# Exposition du port
 EXPOSE 80
+
+# Commande de démarrage pour servir l'application avec serve
+CMD serve -s build -l 80
