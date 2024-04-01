@@ -1,10 +1,9 @@
 FROM node:alpine
+FROM php:8.0-apache as base
 
-# Création du répertoire de travail dans le conteneur
-WORKDIR /app
-
+WORKDIR /var/www/html/
 # Copie du reste des fichiers du projet dans le répertoire de travail du conteneur
-COPY . .
+COPY . /var/www/html/
 
 # Installation des dépendances
 RUN npm install
