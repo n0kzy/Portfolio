@@ -25,6 +25,3 @@ RUN npm run build
 # Exposition du port utilisé par votre application React Native
 EXPOSE 3000
 
-# Commande par défaut pour démarrer votre application React Native
-CMD ["npm", "start"]
-
