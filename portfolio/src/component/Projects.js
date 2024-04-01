@@ -9,13 +9,42 @@ import gromp from "../assets/1.png"
                     <div className="Container1">
                         <img src={SAE} alt="description" className="ProjectImage1"/>
                         <div className="middle">
-                            <div className="text">Projet qui permet de s'entrainer en anglais de manière ludique avec des quizz, memory et autres jeux</div>
+                            <div className="text">Dans le cadre de mes Saé de 175 heures, j'ai développé un projet pour
+                                améliorer les compétences linguistiques en anglais, incluant des quiz, jeux de mémoire
+                                et mode examen. Nous avons (avec mes 3 coéquipiers) optimisé la base de données pour
+                                garantir la sécurité des données. Grâce à une démarche agile, nous avons assuré la
+                                satisfaction des parties prenantes en répondant aux besoins métiers. J'ai collaboré avec
+                                mon équipe pour situer mon rôle et contribuer à la réalisation des objectifs. Les
+                                langages PHP, Android, JavaScript et EntityFramework (.NET) ont été utilisés. Nous avons
+                                suivi la méthode Scrum et utilisé des tableaux Kanban pour organiser notre travail en
+                                équipe. Cette expérience a enrichi mes compétences techniques et organisationnelles,
+                                tout en contribuant à l'amélioration des compétences linguistiques des
+                                utilisateurs. <br/><br/> <a
+                                    href="https://codefirst.iut.uca.fr/git/antoine.jourdain/sae_2a_anglais">REPOS</a>
+                            </div>
                         </div>
                     </div>
                     <div className="Container2" >
                     <img src={gromp} alt="description" className="ProjectImage2"/>
                     <div className="middle">
-                        <div className="text">C'est le croquis d'une application visant a donner une grandes quantités d'informations variés sur des jeux vidéos</div>
+                        <div className="text">Dans le cadre de mes Saé de 175 heures, j'ai réalisé seul un projet en
+                            MAUI,
+                            une application fournissant une large gamme d'informations sur les jeux vidéo. Malgré les
+                            imprévus
+                            dus à l'absence de mon coéquipier, j'ai su m'adapter et mener à bien le projet. Cette
+                            application
+                            offre des détails sur les personnages (champions), les cartes et les modes de jeu
+                            disponibles,
+                            comme illustré dans l'image fournie. J'ai optimisé la base de données pour gérer
+                            efficacement
+                            les vastes quantités d'informations sur les jeux vidéo. Malgré les défis, j'ai appliqué une
+                            démarche de suivi de projet en utilisant des kanbans. Enfin, j'ai assumé le rôle complet de
+                            l'équipe pour mener à bien le projet, démontrant ma capacité à travailler de manière
+                            autonome
+                            et à m'adapter aux circonstances imprévues. <br/><br/>
+                            <a
+                                href="https://codefirst.iut.uca.fr/git/alexandre.bouvot/SAE_2.01_BOUVOT_BRUGIERE.git">REPOS</a>
+                        </div>
                     </div>
                     </div>
                 </div>
