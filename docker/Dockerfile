@@ -1,27 +1,24 @@
-# Étape de construction
+# Étape de build pour construire l'application React
 FROM node:alpine as build
 
-# Définition du répertoire de travail
 WORKDIR /app
 
 # Copie des fichiers du projet dans le répertoire de travail du conteneur
 COPY . .
 
-# Installation des dépendances
+# Installation des dépendances et construction de l'application React
 RUN npm install
-
-# Étape de production
-FROM node:alpine
-
-# Définition du répertoire de travail
-WORKDIR /app
-
-# Copie des fichiers construits depuis l'étape précédente
-COPY --from=build /app /app
-
-# Exécution de la commande de build pour votre application React Native
 RUN npm run build
+RUN npm install -g serve
 
-# Exposition du port utilisé par votre application React Native
-EXPOSE 3000
+# Étape de production pour servir les fichiers statiques
+FROM nginx:alpine
+
+# Copie des fichiers construits dans le répertoire de travail du conteneur Nginx
+COPY --from=build /app/build /usr/share/nginx/html
+
+EXPOSE 80
+CMD serve build -l 80
+
+# Commande par défaut pour démarrer Nginx
 
