@@ -4,7 +4,7 @@ FROM node:alpine as build
 WORKDIR /app
 
 # Copie des fichiers du projet dans le répertoire de travail du conteneur
-COPY . /app
+COPY . .
 
 # Installation des dépendances et construction de l'application React
 RUN npm install
@@ -17,8 +17,8 @@ FROM nginx:alpine
 # Copie des fichiers construits dans le répertoire de travail du conteneur Nginx
 COPY --from=build /app/build /usr/share/nginx/html
 
-RUN serve -s build -l 80
 EXPOSE 80
+CMD serve build -l 80
 
 # Commande par défaut pour démarrer Nginx
 
