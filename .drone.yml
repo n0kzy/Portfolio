@@ -16,7 +16,7 @@ steps:
       sonar_token:
         from_secret: sonar_token
 
-	  - name: docker-build-and-push
+	- name: docker-build-and-push
     image: plugins/docker
     settings:
        dockerfile: docker/Dockerfile
