@@ -35,6 +35,6 @@ steps:
       context: portfolio/
     environment:
         IMAGENAME: hub.codefirst.iut.uca.fr/patrick.brugiere/portfoliodepot:latest
-        CONTAINERNAME: portfoliodepot
+        CONTAINERNAME: portfolio
         COMMAND: create
         OVERWRITE: true
