@@ -16,11 +16,11 @@ steps:
       sonar_token:
         from_secret: sonar_token
 
-  - name: docker-build-and-push
+	  - name: docker-build-and-push
     image: plugins/docker
     settings:
-      context: portfolio/
        dockerfile: docker/Dockerfile
+       context: portfolio/
        registry: hub.codefirst.iut.uca.fr
        mirror: https://proxy.iut.uca.fr:8443
        repo: hub.codefirst.iut.uca.fr/patrick.brugiere/portfoliodepot
