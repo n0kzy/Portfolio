@@ -31,8 +31,6 @@ steps:
          
   - name: deploy-container
     image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-dockerproxy-clientdrone:latest
-    settings:
-      context: portfolio/
     environment:
         IMAGENAME: hub.codefirst.iut.uca.fr/patrick.brugiere/portfoliodepot:latest
         CONTAINERNAME: portfolio
