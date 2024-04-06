@@ -1,6 +1,6 @@
 #works {
     background-color: #171612;
-    min-height: calc(80vh - 4rem);
+    min-height: calc(95vh - 4rem);
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -11,29 +11,22 @@
     font-size: calc(10px + 2vmin);
     color: #9FF9CA;
 }
-.Container1{
+
+.Container1, .Container2 {
     position: relative;
 }
-.Container2{
-    position: relative;
-}
-.ProjectImage1{
+
+.ProjectImage1, .ProjectImage2 {
     opacity: 1;
     display: flex;
     object-fit: cover;
-    max-height:30rem ;
+    max-height: 30rem;
     max-width: 50rem;
     margin: 0.5rem;
+    cursor: pointer; /* Ajout pour pointer le curseur au survol */
 }
-.ProjectImage2{
-    opacity: 1;
-    display: flex;
-    object-fit: cover;
-    max-height:30rem ;
-    max-width: 50rem;
-    margin: 0.5rem;
-}
-.ProjectImageContainer{
+
+.ProjectImageContainer {
     flex-wrap: wrap;
     display: flex;
     align-items: center;
@@ -42,91 +35,92 @@
     position: relative;
 }
 
-a{
+a {
     text-decoration: none;
     color: #004fff;
     font-weight: bold;
     font-size: 20px;
-    cursor: default; /* Facultatif : change le curseur en curseur par défaut */
+    cursor: default;
 }
+
 .middle {
     display: flex;
-    top: 80%;
-    width: 85%;
-    position: absolute;
-    padding: 10px;
-    color: white;
-    border-radius: 5px;
-    opacity: 0;
-    transition: opacity 0.5s ease; /* Durée de transition plus longue (0.5s au lieu de 0.3s) */
-    transform: translateY(-100%);
-    margin: auto;
-    left: 0;
-    right: 0;
-
-}
-
-.text {
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    position: fixed;
+    transform: translate(-50%, -50%); /* Ajout pour centrer le pop-up */
     background-color: whitesmoke;
     color: black;
     font-size: 16px;
-    width: 100%;
     padding: 35px 35px;
-}
-.Container1:hover{ .ProjectImage1 {
-    opacity: 0.5;
-}
-    .middle {
-        opacity: 1;
-    }
-}
-.Container2:hover{ .ProjectImage2 {
-    opacity: 0.5;
-}
-    .middle {
-        opacity: 1;
-    }
+    border-radius: 10px;
+    z-index: 100;
+    transition: opacity 0.3s ease;
 }
 
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur noire semi-transparente */
+    z-index: 998; /* Doit être inférieur à celui du pop-up */
+    opacity: 0; /* Initialisation de l'opacité à 0 */
+    transition: opacity 0.3s ease; /* Ajout de la transition */
+}
 
-@media screen and (max-width:800px){
-    .ProjectImage{
-        height:20rem ;
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px; /* Taille de la croix */
+    font-weight: bold;
+    cursor: pointer;
+    color: #000; /* Couleur de la croix */
+}
+
+/* Lorsque le pop-up est ouvert, on augmente l'opacité de l'overlay à 1 */
+.Container1:hover .middle, .Container2:hover .middle {
+    opacity: 1;
+}
+
+/* Lorsque le pop-up est ouvert, on augmente l'opacité de l'overlay à 1 */
+.Container1:hover .popup-overlay, .Container2:hover .popup-overlay {
+    opacity: 1;
+}
+
+/* Ajout de la règle hover pour les images */
+.Container1:hover .ProjectImage1, .Container2:hover .ProjectImage2 {
+    opacity: 0.5;
+}
+
+/* Ajout de la règle hover pour afficher le pop-up */
+.Container1:hover .middle, .Container2:hover .middle {
+    opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+    .ProjectImage {
+        height: 20rem;
         max-width: 22rem;
     }
-    .ProjectImageContainer{
-        width: 90%;
-        max-width: 80rem
-    }
-    .ProjectImage1{
-        width: 95% ;
 
+    .ProjectImageContainer {
+        width: 90%;
+        max-width: 80rem;
     }
-    .ProjectImage2{
+
+    .ProjectImage1, .ProjectImage2 {
         width: 95%;
     }
+
     .middle {
-        width: 50%;
-        bottom: 20%;
-        top : 50%;
-        right: 20%;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        opacity: 0;
-        transition: opacity 0.5s ease; /* Durée de transition plus longue (0.5s au lieu de 0.3s) */
-        transform: translateY(-100%);
-
+        width: 80%;
+        height: 80%;
+        padding: 25px;
+        font-size: 14px;
     }
-
-    .text {
-        left: 25%;
-        background-color: whitesmoke;
-        color: black;
-        font-size: 8px;
-        padding: 25px 25px;
-    }
-
 }

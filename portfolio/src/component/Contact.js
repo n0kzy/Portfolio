@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
 import "./Contact.css"
 import emailjs from '@emailjs/browser';
-
+import CV from"../assets/CV-1.pdf"
 const Contact = () => {
     const form = useRef();
     const sendEmail = (e) => {
@@ -27,7 +27,7 @@ const Contact = () => {
             <div className="TextContainer">
 
                 <form ref={form} onSubmit={sendEmail} className="ContactForm">
-                    <a className="CV" href="../assets/CV-1.pdf" download>CV</a>
+                    <a className="CV" href={CV} name={CV} download="CV.pdf">CV</a>
                     <h1 className="ContactTitle">You can contact me here</h1>
                     <input type="text" className="name" placeholder="Your Name" name="your_name" required={true}/>
                     <input type="email" className="email" placeholder="Your Email" name="your_email" required={true}/>
