@@ -3,7 +3,7 @@
 .formationContainer{
     flex : 1;
     background-color: #171612;
-    min-height: calc(100vh - 4rem);
+    min-height: calc(110vh - 4rem);
     margin: 0;
     display: flex;
     flex-direction: row;
