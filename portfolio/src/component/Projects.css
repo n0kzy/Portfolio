@@ -36,22 +36,21 @@
 }
 
 a {
-    text-decoration: none;
-    color: #004fff;
+    color: darkturquoise;
     font-weight: bold;
     font-size: 20px;
     cursor: default;
 }
 
 .middle {
+    background-color: whitesmoke;
     display: flex;
     top: 50%;
     left: 50%;
-    width: 70%;
-    height: 70%;
+    width: 60%;
+    height: 65%;
     position: fixed;
     transform: translate(-50%, -50%); /* Ajout pour centrer le pop-up */
-    background-color: whitesmoke;
     color: black;
     font-size: 16px;
     padding: 35px 35px;
@@ -80,6 +79,10 @@ a {
     font-weight: bold;
     cursor: pointer;
     color: #000; /* Couleur de la croix */
+}
+
+.text{
+    font-size: 21px;
 }
 
 /* Lorsque le pop-up est ouvert, on augmente l'opacité de l'overlay à 1 */
@@ -117,10 +120,24 @@ a {
         width: 95%;
     }
 
-    .middle {
-        width: 80%;
-        height: 80%;
-        padding: 25px;
+    .text{
         font-size: 14px;
     }
+
+    .middle {
+        width: 80%;
+        height: 60%;
+        padding: 20px;
+        font-size: 12px;
+    }
 }
+
+@media screen and (max-width: 522px) {
+
+    .text{
+        font-size: 11px;
+    }
+
+
+}
+

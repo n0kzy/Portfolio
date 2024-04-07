@@ -14,7 +14,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%
+    width: 90%;
+    flex-wrap: wrap;
+    position: relative;
+    height: auto;
 }
 
 .columnText{
@@ -23,7 +26,8 @@
 
 .Text{
     padding-left: 3vh;
-    font-size: 3vh
+    font-size: 3vh;
+    width: 65%;
 }
 .Image{
     border-radius: 800px;
@@ -34,11 +38,16 @@
 @media screen and (max-width: 800px){
     .Image{
         width: 150px;
+        height: 150px;
+        padding: 1vh;
     }
-    .Text{
+    .Text {
         width: 80%;
-        padding-left: 1.5vh;
-        font-size: 1.5vh
+        font-size: 2vh;
+    }
+    .aboutMe{
+        background-color: #171612;
+        min-height: calc(75vh - 4rem);
     }
 
 }
