@@ -47,8 +47,8 @@ a {
     display: flex;
     top: 50%;
     left: 50%;
-    width: 60%;
-    height: 65%;
+    width: 80%;
+    height: 75%;
     position: fixed;
     transform: translate(-50%, -50%); /* Ajout pour centrer le pop-up */
     color: black;
@@ -125,8 +125,8 @@ a {
     }
 
     .middle {
-        width: 80%;
-        height: 60%;
+        width: 85%;
+        height: 65%;
         padding: 20px;
         font-size: 12px;
     }
