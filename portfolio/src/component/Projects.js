@@ -2,23 +2,29 @@ import "./Projects.css"
 import React, {useState} from 'react'
 import SAE from "../assets/SAE_2A_Anglais.png"
 import gromp from "../assets/1.png"
+import ffgo from "../assets/FFGO_logo2.png"
 import Popup from "reactjs-popup";
     const Projects = () => {
         const [modal, setModal] = useState(false)
         const [modal2, setModal2] = useState(false)
+        const [modal3, setModal3] = useState(false)
+
         const toggleModal = () => {
             setModal(!modal)
         }
         const toggleModal2 = () => {
             setModal2(!modal2)
         }
+        const toggleModal3 = () => {
+            setModal3(!modal3)
+        }
 
         return (
             <section id='works' className="Projects">
 
                 <div className="ProjectImageContainer">
-                    <div className="Container1">
-                        <img src={SAE} alt="description" className="ProjectImage1" onClick={toggleModal}/>
+                    <div className="Container">
+                        <img src={SAE} alt="description" className="ProjectImage" onClick={toggleModal}/>
                         {modal && (
                             <div className="middle">
                                 <span className="close" onClick={toggleModal}>&times;</span>
@@ -33,8 +39,8 @@ import Popup from "reactjs-popup";
                         )}
                     </div>
 
-                    <div className="Container2">
-                        <img src={gromp} alt="description" className="ProjectImage2" onClick={toggleModal2}/>
+                    <div className="Container">
+                        <img src={gromp} alt="description" className="ProjectImage" onClick={toggleModal2}/>
                         { modal2 && (
                             <div className="middle">
                                 <span className="close" onClick={toggleModal2}>&times;</span>
@@ -62,6 +68,21 @@ import Popup from "reactjs-popup";
                                     Toutes ses réalisations sont disponibles dans le dépot ci-dessous.<br/><br/>
                                     <a
                                         href="https://codefirst.iut.uca.fr/git/alexandre.bouvot/SAE_2.01_BOUVOT_BRUGIERE.git">REPOS</a>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                    <div className="Container">
+                        <img src={ffgo} alt="description" className="ProjectImage" onClick={toggleModal3}/>
+                        {modal3 && (
+                            <div className="middle">
+                                <span className="close" onClick={toggleModal3}>&times;</span>
+                                <div className="text">Pendant mes 110 heures de projet SAÉ, nous avons créer un projet permettant de capturer des animaux en 
+                                    les prenant en photos, ce projet a pour but de faire sortir les utilisateurs de chez eux pour aller dans des endroits ou 
+                                    ils n'iraient pas d'habitude pour capturer des animaux. Le projet a été réalisé en équipe de 5 personnes, avec une partie
+                                    application mobile et une partie API. J'ai travaillé sur la partie mobile, en utilisant React Native pour développer l'application.
+                                    <br/><br/> <a
+                                        href="https://codefirst.iut.uca.fr/git/antoine.jourdain/sae_2a_anglais">REPOS</a>
                                 </div>
                             </div>
                         )}

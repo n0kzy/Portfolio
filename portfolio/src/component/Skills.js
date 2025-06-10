@@ -6,7 +6,7 @@ const Skills = () => {
             <div className="Skills">
                 <span>
                     <h1 className="Titles" >Langages informatiques :</h1> <br/>
-                C, C++ (Arduino), C#, Shell (bash, sh, zsh), Java, FXML, PHP8, CSS3, HTML5, SQL, PL/pgSQL, .NET + XAML & Razor, Kotlin, ReactNative<br/>
+                C, C++, C#, Shell, Java, FXML, PHP8, PL/pgSQL, .NET, Kotlin, ReactNative<br/>
 
                 <h1 className="Titles" >IDE :</h1><br/>
                 JetBrains, VisualStudio<br/>

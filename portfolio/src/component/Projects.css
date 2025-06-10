@@ -16,7 +16,7 @@
     position: relative;
 }
 
-.ProjectImage1, .ProjectImage2 {
+.ProjectImage {
     opacity: 1;
     display: flex;
     object-fit: cover;
@@ -83,25 +83,27 @@ a {
 
 .text{
     font-size: 21px;
+    align-items: center;
+    align-content: center;
 }
 
 /* Lorsque le pop-up est ouvert, on augmente l'opacité de l'overlay à 1 */
-.Container1:hover .middle, .Container2:hover .middle {
+.Container:hover .middle, .middle {
     opacity: 1;
 }
 
 /* Lorsque le pop-up est ouvert, on augmente l'opacité de l'overlay à 1 */
-.Container1:hover .popup-overlay, .Container2:hover .popup-overlay {
+.Container:hover .popup-overlay, .popup-overlay {
     opacity: 1;
 }
 
 /* Ajout de la règle hover pour les images */
-.Container1:hover .ProjectImage1, .Container2:hover .ProjectImage2 {
+.Container:hover .ProjectImage {
     opacity: 0.5;
 }
 
 /* Ajout de la règle hover pour afficher le pop-up */
-.Container1:hover .middle, .Container2:hover .middle {
+.Containe1:hover .middle, .middle {
     opacity: 1;
 }
 
@@ -116,7 +118,7 @@ a {
         max-width: 80rem;
     }
 
-    .ProjectImage1, .ProjectImage2 {
+    .ProjectImage {
         width: 95%;
     }
 
