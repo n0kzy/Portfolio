@@ -39,6 +39,8 @@
     max-height: 400px;
 }
 
+
+
 @media screen and (max-width: 800px){
     .Image{
         width: 150px;

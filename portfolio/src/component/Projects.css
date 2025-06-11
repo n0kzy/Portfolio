@@ -1,4 +1,4 @@
-#works {
+.Projects {
     background-color: #171612;
     min-height: calc(95vh - 4rem);
     margin: 0 auto;
@@ -85,6 +85,8 @@ a {
     font-size: 21px;
     align-items: center;
     align-content: center;
+    animation: fadeIn 0.5s ease-out forwards;
+
 }
 
 /* Lorsque le pop-up est ouvert, on augmente l'opacité de l'overlay à 1 */
@@ -105,6 +107,18 @@ a {
 /* Ajout de la règle hover pour afficher le pop-up */
 .Containe1:hover .middle, .middle {
     opacity: 1;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 800px) {

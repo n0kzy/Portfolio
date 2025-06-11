@@ -7,7 +7,7 @@ const intro = () =>{
             <div className="TextContaint">
                 <span className="IntroText">Bonjour</span> <br/>
                 <span className="Name">Je m'appelle Patrick Brugière</span> <br/>
-                <span className="IntroText">Etudiant en 2ème année de BUT informatique</span> <br/>
+                <span className="IntroText">Etudiant en 3ème année de BUT informatique</span> <br/>
             </div>
             <div className="ImageContainer">
             <img src={profile} alt="Profile" className="Image" />

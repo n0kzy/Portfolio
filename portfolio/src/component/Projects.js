@@ -20,7 +20,7 @@ import Popup from "reactjs-popup";
         }
 
         return (
-            <section id='works' className="Projects">
+            <section className="Projects">
 
                 <div className="ProjectImageContainer">
                     <div className="Container">
@@ -81,6 +81,7 @@ import Popup from "reactjs-popup";
                                     les prenant en photos, ce projet a pour but de faire sortir les utilisateurs de chez eux pour aller dans des endroits ou 
                                     ils n'iraient pas d'habitude pour capturer des animaux. Le projet a été réalisé en équipe de 5 personnes, avec une partie
                                     application mobile et une partie API. J'ai travaillé sur la partie mobile, en utilisant React Native pour développer l'application.
+                                    
                                     <br/><br/> <a
                                         href="https://codefirst.iut.uca.fr/git/antoine.jourdain/sae_2a_anglais">REPOS</a>
                                 </div>

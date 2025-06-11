@@ -16,6 +16,39 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+body.dark-mode .Projects,
+body.dark-mode .App-header,
+body.dark-mode .App,
+body.dark-mode .Intro,
+body.dark-mode .aboutMe,
+body.dark-mode .TextContainer,
+body.dark-mode .formationContainer,
+body.dark-mode .Skills,
+body.dark-mode .Contact,
+body.dark-mode .ContactForm,
+body.dark-mode .ContactText,
+body.dark-mode .ContactContainer,
+body.dark-mode .NavBar,
+body.dark-mode .Section,
+body.dark-mode .IntroText,
+body.dark-mode .Name,
+body.dark-mode .ImageContainer,
+body.dark-mode .Image,
+body.dark-mode .Text,
+body.dark-mode .TextContaint,
+body.dark-mode .CV,
+body.dark-mode .middle,
+body.dark-mode .ProjectImageContainer,
+body.dark-mode .SectionContainer,
+body.dark-mode .nav__menu {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .SectionContainer .Section,
+body.dark-mode .nav__menu .NavBar li {
+  color: white;
+}
 
 .App-header {
   background-color: #171612;

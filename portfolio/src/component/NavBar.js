@@ -1,9 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import './NavBar.css';
 import test from"../assets/list_icon.png"
 const NavBar = () => {
     const [active, setActive] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(false);    
+
+    useEffect(() => {
+    const savedTheme = localStorage.getItem('darkMode') === 'true';
+    setIsDarkMode(savedTheme);
+    document.body.classList.toggle('dark-mode', savedTheme);
+    }, []);
+
+    const toggleDarkMode = () => {
+    setIsDarkMode(prev => {
+        const newMode = !prev;
+        document.body.classList.toggle('dark-mode', newMode);
+        localStorage.setItem('darkMode', newMode);
+        return newMode;
+    });
+    };
 
     const toggleMenu = () => {
         setActive(!active);
@@ -24,6 +40,11 @@ const NavBar = () => {
                       to="Projects">Projects</Link>
                 <Link activeClass='active' spy={true} smooth={true} offset={-100} duration={600} className="Contact"
                       to="ContactContainer">Contact</Link>
+
+                <button onClick={toggleDarkMode} id="toggleBtn">
+                {isDarkMode ? 'Mode clair' : 'Mode sombre'}
+                </button>
+
             </div>
 
             <button onClick={toggleMenu} className="nav__toggler">
