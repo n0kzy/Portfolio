@@ -1,5 +1,4 @@
 .Projects {
-    background-color: #171612;
     min-height: calc(95vh - 4rem);
     margin: 0 auto;
     display: flex;
@@ -9,7 +8,6 @@
     text-align: center;
     padding: 0 1rem;
     font-size: calc(10px + 2vmin);
-    color: #9FF9CA;
 }
 
 .Container1, .Container2 {
@@ -17,23 +15,26 @@
 }
 
 .ProjectImage {
-    opacity: 1;
-    display: flex;
-    object-fit: cover;
-    max-height: 30rem;
-    max-width: 50rem;
-    margin: 0.5rem;
-    cursor: pointer; /* Ajout pour pointer le curseur au survol */
+  opacity: 1;
+  display: flex;
+  object-fit: cover;
+  max-height: 20rem;
+  max-width: 20rem;
+  margin: 1rem;
+  cursor: pointer;
+  border-radius: 3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .ProjectImageContainer {
-    flex-wrap: wrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    position: relative;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
 }
+
 
 a {
     color: darkturquoise;
@@ -43,7 +44,6 @@ a {
 }
 
 .middle {
-    background-color: whitesmoke;
     display: flex;
     top: 50%;
     left: 50%;
@@ -51,8 +51,7 @@ a {
     height: 75%;
     position: fixed;
     transform: translate(-50%, -50%); /* Ajout pour centrer le pop-up */
-    color: black;
-    font-size: 16px;
+    font-size: 10px;
     padding: 35px 35px;
     border-radius: 10px;
     z-index: 100;
@@ -65,7 +64,6 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Couleur noire semi-transparente */
     z-index: 998; /* Doit être inférieur à celui du pop-up */
     opacity: 0; /* Initialisation de l'opacité à 0 */
     transition: opacity 0.3s ease; /* Ajout de la transition */
@@ -78,11 +76,10 @@ a {
     font-size: 40px; /* Taille de la croix */
     font-weight: bold;
     cursor: pointer;
-    color: #000; /* Couleur de la croix */
 }
 
 .text{
-    font-size: 21px;
+    font-size: 19px;
     align-items: center;
     align-content: center;
     animation: fadeIn 0.5s ease-out forwards;
@@ -139,7 +136,6 @@ a {
     .text{
         font-size: 14px;
     }
-
     .middle {
         width: 85%;
         height: 65%;

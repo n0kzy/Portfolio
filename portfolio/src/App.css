@@ -1,6 +1,60 @@
+:root {
+  --accent: #9FF9CA;
+  --dark-bg: #171612;
+  --light-bg: #e9e9e9;
+  --mid-dark: #1e1e1e;
+  --nav-bg: #060113;
+  --hover-gold: gold;
+  --green-accent: darkseagreen;
+  --text-dark: #171612;
+  --white-soft: #f4f4f4;
+  --white-lighter: #fafafa;
+}
+
+body {
+  background: var(--light-bg);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body.dark-mode {
+  background: linear-gradient(160deg, #1c1b19, #111);
+  color: white;
+}
+
+body.dark-mode .Projects,
+body.dark-mode .App-header,
+body.dark-mode .App,
+body.dark-mode .Intro,
+body.dark-mode .aboutMe,
+body.dark-mode .TextContainer,
+body.dark-mode .formationContainer,
+body.dark-mode .Skills,
+body.dark-mode .ContactText,
+body.dark-mode .ContactContainer,
+body.dark-mode .IntroText,
+body.dark-mode .Name,
+body.dark-mode .ImageContainer,
+body.dark-mode .Image,
+body.dark-mode .Text,
+body.dark-mode .TextContaint,
+body.dark-mode .CV,
+body.dark-mode .middle,
+body.dark-mode .ProjectImageContainer,
+body.dark-mode .nav__menu,
+body.dark-mode .SectionContainer,
+body.dark-mode .Section,
+body.dark-mode .NavBar,
+body.dark-mode .Contact {
+  background: linear-gradient(160deg, #1e1e1e, #121212);
+  color: white;
+}
+
 .App {
   text-align: center;
-  background: #171612;
+  background: var(--dark-bg);
   overflow: auto;
   width: 100%;
   overflow-y: hidden;
@@ -16,54 +70,104 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-body.dark-mode .Projects,
-body.dark-mode .App-header,
-body.dark-mode .App,
-body.dark-mode .Intro,
-body.dark-mode .aboutMe,
-body.dark-mode .TextContainer,
-body.dark-mode .formationContainer,
-body.dark-mode .Skills,
-body.dark-mode .Contact,
-body.dark-mode .ContactForm,
-body.dark-mode .ContactText,
-body.dark-mode .ContactContainer,
-body.dark-mode .NavBar,
-body.dark-mode .Section,
-body.dark-mode .IntroText,
-body.dark-mode .Name,
-body.dark-mode .ImageContainer,
-body.dark-mode .Image,
-body.dark-mode .Text,
-body.dark-mode .TextContaint,
-body.dark-mode .CV,
-body.dark-mode .middle,
-body.dark-mode .ProjectImageContainer,
-body.dark-mode .SectionContainer,
-body.dark-mode .nav__menu {
-  background-color: #1e1e1e;
-  color: white;
+
+.name, .email, .msg, .Projects {
+  background: var(--dark-bg);
+  color: whitesmoke;
 }
 
-body.dark-mode .SectionContainer .Section,
-body.dark-mode .nav__menu .NavBar li {
-  color: white;
+.ContactContainer {
+  background: linear-gradient(to right, var(--green-accent), #c1dec1);
+  color: var(--text-dark);
 }
 
 .App-header {
-  background-color: #171612;
+  background: var(--dark-bg);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  color: #9FF9CA;
+  color: var(--accent);
+}
+
+.CV {
+  color: var(--accent);
+  background-color: var(--dark-bg);
+}
+.CV:hover {
+  color: var(--dark-bg);
+  background-color: var(--green);
+}
+
+.submit {
+  background: var(--white-soft);
+}
+.Submit:hover {
+  background-color: #d3d3d3;
+}
+
+.aboutMe, .Projects, .formationContainer, .Intro, .SectionContainer .Section, .IntroText, .Name {
+  color: var(--accent);
+}
+
+.close {
+  color: black;
 }
 
 .App-link {
   color: darkgreen;
 }
+
+.middle {
+  color: var(--accent);
+  background-color: var(--mid-dark);
+}
+
+.formationContainer {
+  background-color: var(--dark-bg);
+}
+
+.Intro {
+  background-color: var(--dark-bg);
+}
+
+.nav__menu {
+  background: var(--nav-bg);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav__menu li a {
+  color: var(--accent);
+}
+.nav__menu li a:hover {
+  color: var(--hover-gold);
+}
+
+.nav__toggler {
+  background: var(--dark-bg);
+  color: var(--accent);
+}
+
+.Contact:hover {
+  color: var(--accent);
+  background-color: var(--nav-bg);
+}
+
+.SectionContainer .Section:hover {
+  color: var(--hover-gold);
+}
+
+.SectionContainer, .Section, .NavBar {
+  background-color: var(--nav-bg);
+}
+
+.Contact {
+  color: black;
+  background: var(--white-lighter);
+}
+
 
 @keyframes App-logo-spin {
   from {

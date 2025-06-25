@@ -33,7 +33,7 @@ import Popup from "reactjs-popup";
                                     Parallèlement, j'ai assumé la responsabilité individuelle du développement de l'API utilisée dans l'application, en tant que seul membre ayant suivi la spécialité mobile. J'ai travaillé à partir de la base de données que nous avions élaborée en groupe plus tôt dans l'année pour créer une API complète, que j'ai ensuite déployée grâce à Docker. J'ai également ajouté un jeton d'authentification (bearer token) pour renforcer la sécurité de l'application.
 
                                     Cette expérience a été enrichissante à bien des égards, tant sur le plan technique que sur le plan organisationnel, et a également contribué à l'amélioration des compétences linguistiques des utilisateurs.<br/><br/> <a
-                                        href="https://codefirst.iut.uca.fr/git/antoine.jourdain/sae_2a_anglais">REPOS</a>
+                                        href="https://github.com/n0kzy/In_english_please">REPOS</a>
                                 </div>
                             </div>
                         )}
@@ -67,7 +67,7 @@ import Popup from "reactjs-popup";
                                     les fonctionnalités de l'application, en assurant une cohérence entre les différentes parties du projet.
                                     Toutes ses réalisations sont disponibles dans le dépot ci-dessous.<br/><br/>
                                     <a
-                                        href="https://codefirst.iut.uca.fr/git/alexandre.bouvot/SAE_2.01_BOUVOT_BRUGIERE.git">REPOS</a>
+                                        href="https://github.com/n0kzy/IHM_Application">REPOS</a>
                                 </div>
                             </div>
                         )}
@@ -83,7 +83,7 @@ import Popup from "reactjs-popup";
                                     application mobile et une partie API. J'ai travaillé sur la partie mobile, en utilisant React Native pour développer l'application.
                                     
                                     <br/><br/> <a
-                                        href="https://codefirst.iut.uca.fr/git/antoine.jourdain/sae_2a_anglais">REPOS</a>
+                                        href="https://github.com/n0kzy/FFGO">REPOS</a>
                                 </div>
                             </div>
                         )}

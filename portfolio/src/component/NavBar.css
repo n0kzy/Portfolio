@@ -1,5 +1,4 @@
 .NavBar {
-    background-color: #060113;
     height: 5rem;
     display: flex;
     align-items: center;
@@ -19,30 +18,19 @@
     margin-right: 2rem;
     cursor: pointer;
     font-size: 1.6rem;
-    color: #9FF9CA;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-.SectionContainer .Section:hover {
-    color: gold;
-}
-
 .Contact {
-    color: black;
     cursor: pointer;
     font-size: 1.6rem;
     font-weight: bold;
     border-radius: 2rem;
     padding: 0.5rem 1rem;
     transition: color 0.3s, background-color 0.3s;
-    background-color: whitesmoke;
 }
 
-.Contact:hover {
-    color: #9FF9CA;
-    background-color: #060113;
-}
 
 .nav__toggler {
     display: none;
@@ -67,14 +55,9 @@
 }
 
 .nav__menu li a {
-    color: #9FF9CA;
     font-size: 1.6rem;
     text-decoration: none;
     transition: color 0.3s;
-}
-
-.nav__menu li a:hover {
-    color: gold;
 }
 
 /* Styles spécifiques pour les petites tailles d'écran */
@@ -88,8 +71,6 @@
     }
 
     .nav__toggler {
-        background-color: #171612;
-        color: #9FF9CA;
         height: 50px;
         width: 50px;
         display: block;

@@ -1,5 +1,4 @@
 .aboutMe{
-    background-color: #171612;
     min-height: calc(105vh - 4rem);
     margin: 0;
     display: flex;
@@ -7,7 +6,6 @@
     flex : 1;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: #9FF9CA;
     padding-bottom: 5vh;
     width: 100%;
 
@@ -52,7 +50,6 @@
         font-size: 2vh;
     }
     .aboutMe{
-        background-color: #171612;
         min-height: calc(75vh - 4rem);
         padding-bottom: 3vh;
     }

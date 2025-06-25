@@ -41,10 +41,6 @@ const NavBar = () => {
                 <Link activeClass='active' spy={true} smooth={true} offset={-100} duration={600} className="Contact"
                       to="ContactContainer">Contact</Link>
 
-                <button onClick={toggleDarkMode} id="toggleBtn">
-                {isDarkMode ? 'Mode clair' : 'Mode sombre'}
-                </button>
-
             </div>
 
             <button onClick={toggleMenu} className="nav__toggler">

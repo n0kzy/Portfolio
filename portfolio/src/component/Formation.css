@@ -2,14 +2,12 @@
 
 .formationContainer{
     flex : 1;
-    background-color: #171612;
     min-height: calc(110vh - 4rem);
     margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     font-size: calc(8px + 2vmin);
-    color: #9FF9CA;
     align-items: flex-start;
 }
 .formationDivWidth{
