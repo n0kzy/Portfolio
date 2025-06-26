@@ -3,12 +3,13 @@
   --dark-bg: #171612;
   --light-bg: #e9e9e9;
   --mid-dark: #1e1e1e;
-  --nav-bg: #060113;
+  --nav-bg: #171612;
   --hover-gold: gold;
   --green-accent: darkseagreen;
   --text-dark: #171612;
   --white-soft: #f4f4f4;
   --white-lighter: #fafafa;
+  --text-light: #ffffff;
 }
 
 body {
@@ -20,8 +21,8 @@ body {
 }
 
 body.dark-mode {
-  background: linear-gradient(160deg, #1c1b19, #111);
-  color: white;
+  background: var(--dark-bg);
+  color: var(--text-light);
 }
 
 body.dark-mode .Projects,
@@ -48,8 +49,8 @@ body.dark-mode .SectionContainer,
 body.dark-mode .Section,
 body.dark-mode .NavBar,
 body.dark-mode .Contact {
-  background: linear-gradient(160deg, #1e1e1e, #121212);
-  color: white;
+  background: var(--dark-bg);
+  color: var(--text-light);
 }
 
 .App {
@@ -71,14 +72,22 @@ body.dark-mode .Contact {
   }
 }
 
-.name, .email, .msg, .Projects {
+.name,
+.email,
+.msg,
+.Projects {
   background: var(--dark-bg);
   color: whitesmoke;
 }
 
 .ContactContainer {
-  background: linear-gradient(to right, var(--green-accent), #c1dec1);
+  background: var(--green-accent);
   color: var(--text-dark);
+}
+
+body.dark-mode .ContactContainer {
+  background: var(--dark-bg);
+  color: var(--text-light);
 }
 
 .App-header {
@@ -96,24 +105,37 @@ body.dark-mode .Contact {
   color: var(--accent);
   background-color: var(--dark-bg);
 }
+
 .CV:hover {
   color: var(--dark-bg);
-  background-color: var(--green);
+  background-color: var(--green-accent);
 }
 
 .submit {
   background: var(--white-soft);
 }
-.Submit:hover {
+
+.submit:hover {
   background-color: #d3d3d3;
 }
 
-.aboutMe, .Projects, .formationContainer, .Intro, .SectionContainer .Section, .IntroText, .Name {
+.aboutMe,
+.Projects,
+.formationContainer,
+.Intro,
+.SectionContainer,
+.Section,
+.IntroText,
+.Name {
   color: var(--accent);
 }
 
 .close {
   color: black;
+}
+
+body.dark-mode .close {
+  color: var(--text-light);
 }
 
 .App-link {
@@ -134,13 +156,14 @@ body.dark-mode .Contact {
 }
 
 .nav__menu {
-  background: var(--nav-bg);
+  background: var(--dark-bg);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .nav__menu li a {
   color: var(--accent);
 }
+
 .nav__menu li a:hover {
   color: var(--hover-gold);
 }
@@ -152,22 +175,28 @@ body.dark-mode .Contact {
 
 .Contact:hover {
   color: var(--accent);
-  background-color: var(--nav-bg);
+  background-color: var(--dark-bg);
 }
 
 .SectionContainer .Section:hover {
   color: var(--hover-gold);
 }
 
-.SectionContainer, .Section, .NavBar {
-  background-color: var(--nav-bg);
+.SectionContainer,
+.Section,
+.NavBar {
+  background-color: var(--dark-bg);
 }
 
 .Contact {
-  color: black;
+  color: var(--text-dark);
   background: var(--white-lighter);
 }
 
+body.dark-mode .Contact {
+  color: var(--text-light);
+  background: var(--dark-bg);
+}
 
 @keyframes App-logo-spin {
   from {

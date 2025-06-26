@@ -6,8 +6,7 @@ const AboutMe = () => {
         <section className="aboutMe">
             <div className="TextContainer">
                 <img className="Image" src={profile} alt="Profile"/>
-                <span className="Text">En tant que passionné de cybersécurité j’aimerais travailler dans ce secteur à l’avenir.
-                Je suis actuellement en étude d’informatique, je suis intéressé par les technologies avancées comme l'intelligence artificielle ainsi que leurs structures et possibles failles.
+                <span className="Text">Je suis actuellement en étude d’informatique, je suis intéressé par les technologies avancées comme l'intelligence artificielle ainsi que leurs structures et possibles failles.
                  En tant qu'autodidacte, je suis capable de m'adapter rapidement à de nouvelles situations et de nouvelles technologies.
                 </span>
             </div>

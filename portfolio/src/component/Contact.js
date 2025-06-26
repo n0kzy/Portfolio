@@ -22,10 +22,7 @@ const Contact = () => {
     };
     return(
         <section className="ContactContainer">
-
-
             <div className="TextContainer">
-
                 <form ref={form} onSubmit={sendEmail} className="ContactForm">
                     <a className="CV" href={CV} name={CV} download="CV.pdf">CV</a>
                     <h1 className="ContactTitle">You can contact me here</h1>
