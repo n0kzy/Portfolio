@@ -1,38 +1,61 @@
 .Intro {
-    min-height: calc(120vh - 4rem);
-    margin: 0 auto;
-    display: flex;
-    font-size: calc(10px + 2vmin);
-    width: 80%;
-
-}
-.TextContaint{
-    flex-direction: column;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-}
-.IntroText{
-    padding-left: 3vh;
-    font-size: 3vh
+  min-height: calc(80vh - 4rem);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  width: 80%;
+  max-width: 1200px;
+  padding: 3rem 0;
+  gap: 2rem;
 }
 
-.IntroText, .Name {
+.TextContaint {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  gap: 1rem;
+}
+
+.IntroText,
+.Name {
   animation: fadeIn 2s ease-out forwards;
-  opacity: 0; 
-}
-.Name{
-    padding-left: 3vh;
-    font-size: 6vh
+  opacity: 0;
 }
 
-.ImageContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    animation: fadeSide 2s ease-out forwards;
+.IntroText {
+  padding-left: 0;
+  font-size: 3vh; /* taille moyenne pour Bonjour et la dernière phrase */
+  line-height: 1.3;
+}
 
+.Name {
+  padding-left: 0;
+  font-size: 4.5vh; /* un peu plus grand, mais moins énorme qu'avant */
+  font-weight: 700;
+}
+
+.ImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  animation: fadeSide 2s ease-out forwards;
+}
+
+.Image {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.Image:hover {
+  transform: scale(1.05);
 }
 
 @keyframes fadeSide {
@@ -44,7 +67,6 @@
     opacity: 1;
     transform: translateX(0);
   }
-    
 }
 
 @keyframes fadeIn {
@@ -58,17 +80,32 @@
   }
 }
 
-@media screen and (max-width: 800px){
-    .Image{
-        width: 200px;
-    }
-    .Name{
-        padding-left: 2vh;
-        font-size: 4vh;
-    }
-    .IntroText{
-        padding-left: 2vh;
-        font-size: 3vh;
-    }
-    
+@media screen and (max-width: 800px) {
+  .Intro {
+    flex-direction: column;
+    min-height: auto;
+    width: 90%;
+    padding: 2rem 0;
+  }
+
+  .TextContaint {
+    align-items: center;
+    text-align: center;
+  }
+
+  .Name {
+    font-size: 4vh;
+  }
+
+  .IntroText {
+    font-size: 2.5vh;
+  }
+
+  .ImageContainer {
+    margin-top: 2rem;
+  }
+
+  .Image {
+    max-width: 200px;
+  }
 }

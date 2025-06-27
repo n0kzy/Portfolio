@@ -1,57 +1,72 @@
-.aboutMe{
-    min-height: calc(105vh - 4rem);
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    flex : 1;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    padding-bottom: 5vh;
-    width: 100%;
-
-}
-.TextContainer{
-    flex-direction: row;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    flex-wrap: wrap;
-    position: relative;
-    height: auto;
+.aboutMe {
+  min-height: calc(65vh - 4rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5vh 2rem;
 }
 
-.columnText{
-    height: 500px;
+.TextContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1200px;
+  gap: 2rem;
 }
 
-.Text{
-    padding-left: 3vh;
-    font-size: 3vh;
-    width: 80%;
-
-}
-.Image{
-    border-radius: 800px;
-    padding: 5vh;
-    max-height: 400px;
+.Image {
+  border-radius: 50%;
+  max-height: 300px;
+  width: auto;
+  object-fit: cover;
+  padding: 0;
+  transition: transform 0.3s ease;
 }
 
+.Image:hover {
+  transform: scale(1.05);
+}
 
+.TextBlock {
+  max-width: 700px;
+  text-align: left;
+}
 
-@media screen and (max-width: 800px){
-    .Image{
-        width: 150px;
-        height: 150px;
-        padding: 1vh;
-    }
-    .Text {
-        width: 80%;
-        font-size: 2vh;
-    }
-    .aboutMe{
-        min-height: calc(75vh - 4rem);
-        padding-bottom: 3vh;
-    }
+.aboutMeTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-decoration: underline lightgrey;
+}
 
+.Text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 800px) {
+  .Image {
+    max-height: 180px;
+    width: 180px;
+  }
+
+  .Text {
+    font-size: 1rem;
+  }
+
+  .aboutMeTitle {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .TextBlock {
+    text-align: center;
+  }
+
+  .TextContainer {
+    flex-direction: column;
+  }
 }

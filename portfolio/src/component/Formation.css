@@ -1,25 +1,67 @@
-
-
-.formationContainer{
-    flex : 1;
-    min-height: calc(110vh - 4rem);
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: calc(8px + 2vmin);
-    align-items: flex-start;
-}
-.formationDivWidth{
-    width: 80%;
-    flex-direction: row;
+.formationContainer {
+  min-height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 2rem;
+  font-size: calc(10px + 1vmin);
 }
 
-.formationTitle{
-    padding: 10px;
+.formationDivWidth {
+  width: 100%;
+  max-width: 80rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.formationDiv{
-    padding: 5px;
-    flex-direction: column;
+.formationTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-light, #ccc);
+  padding-bottom: 1rem;
+}
+
+.formationDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Blocs individuels */
+.formationDiv h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.formationDiv h3 {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .formationContainer {
+    padding: 2rem 1rem;
+  }
+
+  .formationDivWidth {
+    padding: 1.5rem;
+  }
+
+  .formationTitle {
+    font-size: 2rem;
+  }
+
+  .formationDiv h2 {
+    font-size: 1.1rem;
+  }
+
+  .formationDiv h3 {
+    font-size: 0.95rem;
+  }
 }

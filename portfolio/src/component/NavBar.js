@@ -35,6 +35,8 @@ const NavBar = () => {
                 <Link activeClass='active' spy={true} smooth={true} offset={-120} duration={500} className="Section"
                       to="formationContainer">Formation</Link>
                 <Link activeClass='active' spy={true} smooth={true} offset={-120} duration={500} className="Section"
+                      to="ExperienceTitle">Expériences</Link>
+                <Link activeClass='active' spy={true} smooth={true} offset={-120} duration={500} className="Section"
                       to="Skills">Skills</Link>
                 <Link activeClass='active' spy={true} smooth={true} offset={-150} duration={600} className="Section"
                       to="Projects">Projects</Link>

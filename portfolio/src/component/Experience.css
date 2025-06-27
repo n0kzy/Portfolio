@@ -1,0 +1,60 @@
+.Experience {
+  min-height: calc(60vh - 4rem);
+  margin: 0 auto;
+  padding: 8rem 1rem;
+  text-align: center;
+  font-size: calc(10px + 1.2vmin);
+}
+
+.ExperienceTitle {
+  margin-bottom: 3rem;
+}
+
+.ExperienceTitle h1 {
+  color: var(--accent);
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.ExperienceContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* le reste ne change pas */
+.ExperienceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.ExperienceCard:hover {
+  transform: scale(1.02);
+}
+
+.ExperienceLogo {
+  max-height: 100px;
+  max-width: 200px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.ExperienceText h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.ExperienceText p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  white-space: pre-line;
+}

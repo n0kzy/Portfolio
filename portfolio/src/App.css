@@ -181,7 +181,26 @@ body.dark-mode .close {
 .SectionContainer .Section:hover {
   color: var(--hover-gold);
 }
+.ExperienceCard {
+  color: var(--accent);
+  background-color: var(--mid-dark);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
 
+.SkillBlock {
+  border-left: 3px solid #9FF9CA;
+  background-color: var(--mid-dark)
+}
+
+.Skills {
+  background-color: #171612;
+  color: #9FF9CA;
+}
+
+.formationDivWidth {
+  background-color: var(--mid-dark);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
 .SectionContainer,
 .Section,
 .NavBar {
