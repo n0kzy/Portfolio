@@ -4,11 +4,15 @@
   margin-bottom: 1.5rem;
   padding: 1rem;
   border-left: 3px solid #9FF9CA;
-  background-color: rgba(255, 255, 255, 0.02); /* très léger fond */
+  background-color: rgba(255, 255, 255, 0.02);
   border-radius: 8px;
   transition: background-color 0.3s ease;
-  min-width: calc(100vh - 4rem);
+
+  width: 80%;       /* largeur fixe relative pour chaque bloc */
+  max-width: 600px; /* largeur max pour pas que ça devienne trop large */
+  box-sizing: border-box; /* pour inclure padding et border dans la largeur */
 }
+
 
 
 .SkillBlock p {
@@ -16,6 +20,7 @@
   font-size: 1rem;
   line-height: 1.6;
 }
+
 .Skills {
   display: flex;
   flex-direction: column;
@@ -23,5 +28,5 @@
   width: 100%;
   min-height: calc(90vh - 4rem);
   margin: 0 auto;
-
 }
+
